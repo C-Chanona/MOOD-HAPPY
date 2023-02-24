@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+}
+
+.header {
+    width: 100%;
+    height: 528px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../imgs/bannerHeaderM.png");
+    background-repeat: no-repeat;
+    background-size: 100% 528px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+a{
+    color: #FFDA15;
+    font-size: x-large;
+    text-decoration: none;
+}
+
+
+.icon {
+    width: auto;
+    height: 35%;
+    margin-top: 20%;
+}
+
+.items-center {
+    height: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.welcome {
+    position: absolute;
+    margin-top: 12.6%;
+    text-align: center;
+    width: 100%;
+}
+
+.gradient {
+    background: linear-gradient(180deg, rgba(110, 65, 208, 0.68) 0%, rgba(142, 79, 232, 0) 100%);
+    width: 100%;
+    height: 6vh;
+}
+
+#menu ul {
+    list-style: none;
+    padding: 0;
+    z-index: 2;
+}
+
+/* items del menu */
+
+#menu li li {
+    background: #AE5CFF;
+}
+
+/* enlaces del menu */
+
+#menu a {
+    display: block;
+    font-size: x-large;
+    padding: 10px;
+    font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    letter-spacing: 2px;
+}
+
+/* items del menu */
+
+#menu li {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+/* efecto al pasar el ratón por los items del menu */
+
+#menu li:hover {
+    background: #AE5CFF;
+}
+
+/* menu desplegable */
+
+#menu ul ul {
+    display: none;
+    position: absolute;
+}
+
+/* items del menu desplegable al pasar el ratón */
+
+#menu li:hover>ul {
+    display: block;
+}
+
+/* Animacion de enlaces */
+a {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+}
+a:hover, a:focus {
+    background-size: 100% 2px;
+    color: white;
+}
