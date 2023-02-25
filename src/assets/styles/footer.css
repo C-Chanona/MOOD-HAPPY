@@ -21,7 +21,23 @@
     line-height: 32px;
 }
 
+.div-father-center{
+    display: block;
+    flex-direction: column;
+}
+
+.div-social-icons{
+    display: flex;
+    justify-content: center;
+    padding-top: 5%;
+}
+
 .div-image{
-    
-    margin-top: 15%;
+    width: 50%;
+    padding-top: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 25%;
+    /* border: 2px solid black; */
 }

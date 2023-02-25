@@ -1,6 +1,7 @@
 import TitleH2 from "../atoms/TitleH2";
 import Span from "../atoms/Span";
 import Logo from "../atoms/Logo";
+import Icon from "../atoms/Icon";
 import { data } from "../../data/data";
 import "../../assets/styles/footer.css";
 
@@ -15,8 +16,16 @@ function Footer() {
                     <Span p="Politicas de Privacidad" />
                 </div>
             </div>
-            <div className="div-image">
-                <Logo img={data.routes.logoF} />
+            <div className="div-father-center">
+                <div className="div-social-icons">
+                    <Icon icon={data.routes.insta} />
+                    <Icon icon={data.routes.twitter} />
+                    <Icon icon={data.routes.face} />
+                </div>
+                <div className="div-image">
+                    <Logo img={data.routes.logoF} />
+                    <Span p="© 2023 Mood Happy" />
+                </div>
             </div>
             <div className="div-border-top">
                 <div className="div-childs">

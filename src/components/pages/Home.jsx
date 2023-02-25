@@ -1,6 +1,7 @@
 import Header from "../molecules/Header";
 import Footer from "../molecules/Footer";
 import BodyLanding from "../organism/BodyLanding";
+import RowCards from "../organism/RowCards";
 
 import "../../assets/styles/global.css"
 
@@ -12,7 +13,7 @@ function Home() {
             </header>
 
             <body>
-                <BodyLanding />
+                <RowCards />
             </body>
 
             <footer>

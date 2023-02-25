@@ -1,9 +1,8 @@
-
+import CardDynamic from "../molecules/CardDynamic";
 
 function BodyLanding() {
     return ( 
-        <>
-        <h2>hola mama</h2></>
+        <CardDynamic />
      );
 }
 
