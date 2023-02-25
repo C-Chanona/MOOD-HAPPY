@@ -1,7 +1,8 @@
 import styled from 'styled-components';
+import {data} from "../../data/data"
 
 const StyledIcon = styled.img`
-    width: 50px;
+    width: ${props => props.src == data.routes.insta || props.src == data.routes.face|| props.src == data.routes.twitter ? "50px" : "100px" };
     height: 50px;
 `;
 

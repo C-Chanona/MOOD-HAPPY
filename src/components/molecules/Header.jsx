@@ -16,10 +16,10 @@ function Header() {
                     <Link to="/Home"> Inicio</Link>
                     <nav id="menu">
                         <ul>
-                            <li><Link to="/Dynamics" >Citas</Link>
+                            <li><Link to="" >Citas</Link>
                                 <ul>
-                                    <li><Link to="/Dynamics" >Terapia Presencial</Link></li>
-                                    <li><Link to="/Home" >Terapia en linea</Link></li>
+                                    <li><Link to="/CitesRegister" >Terapia Presencial</Link></li>
+                                    <li><Link to="https://meet.google.com/" >Terapia en linea</Link></li>
                                 </ul>
                             </li>
                         </ul>

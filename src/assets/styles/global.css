@@ -1,9 +1,19 @@
-h1{
-    font-family: "Volkhov";
-    font-style: normal;
+.div-center-elements{
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2%;
 }
 
-.logo{
-    width: 100%;
-    height: 120px;
+.div-left-elements{
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+.div-right-elements{
+    display: flex;
+    justify-content: flex-start;
 }
