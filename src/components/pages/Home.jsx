@@ -10,28 +10,28 @@ import "../../assets/styles/global.css"
 function Home() {
     return (
         <>
-            <header>
-                <Header />
-            </header>
-
             <body>
-                <RowInfo />
-                <div className="div-left-elements">
-                    <div >
-                        <Img image={data.imgs.plusPromotion} />
+                <header>
+                    <Header />
+                </header>
+                <main>
+                    <RowInfo />
+                    <div className="div-left-elements">
+                        <div >
+                            <Img image={data.imgs.plusPromotion} />
+                        </div>
                     </div>
-                </div>
-                <RowServices/>
-                <div className="div-right-elements">
-                    <div >
-                        <Img image={data.imgs.psicology} />
+                    <RowServices />
+                    <div className="div-right-elements">
+                        <div >
+                            <Img image={data.imgs.psicology} />
+                        </div>
                     </div>
-                </div>
+                </main>
+                <footer>
+                    <Footer />
+                </footer>
             </body>
-
-            <footer>
-                <Footer />
-            </footer>
         </>
     );
 }

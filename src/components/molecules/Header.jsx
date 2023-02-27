@@ -13,12 +13,12 @@ function Header() {
                     <Logo img={data.routes.logoH} />
                 </div>
                 <div className="items-center" id="colors">
-                    <Link to="/Home"> Inicio</Link>
+                    <Link to="/"> Inicio</Link>
                     <nav id="menu">
                         <ul>
                             <li><Link to="" >Citas</Link>
                                 <ul>
-                                    <li><Link to="/CitesRegister" >Terapia Presencial</Link></li>
+                                    <li><Link to="/Cites" >Terapia Presencial</Link></li>
                                     <li><Link to="https://meet.google.com/" >Terapia en linea</Link></li>
                                 </ul>
                             </li>

@@ -14,9 +14,9 @@ const StyledInput = styled.input`
 `;
 
 
-function Input({type,placeholder}) {
+function Input({type,placeholder,name}) {
     return ( 
-        <StyledInput type={type} placeholder={placeholder} required />
+        <StyledInput type={type} placeholder={placeholder} name={name} required />
      );
 }
 

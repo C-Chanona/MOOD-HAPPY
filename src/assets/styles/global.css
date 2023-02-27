@@ -17,3 +17,12 @@
     display: flex;
     justify-content: flex-start;
 }
+
+.background-purple{
+    background-color: #754CCE;
+    color: white !important;
+}
+
+.background-white{
+    color: black;
+}
