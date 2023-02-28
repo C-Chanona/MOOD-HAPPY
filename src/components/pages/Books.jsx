@@ -2,23 +2,23 @@ import Header from "../molecules/Header";
 import Footer from "../molecules/Footer";
 import RowCards from "../organism/RowCards";
 
-function Dynamics() {
+function Books() {
     return (
-        <>
+        <body>
             <body>
                 <header>
                     <Header />
                 </header>
                 <main>
                     <RowCards />
-                    
+                    <RowCards />
                 </main>
                 <footer>
                     <Footer />
                 </footer>
             </body>
-        </>
+        </body>
     );
 }
 
-export default Dynamics;
+export default Books;

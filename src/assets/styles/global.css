@@ -1,3 +1,4 @@
+
 .div-center-elements{
     margin-top: 2%;
     display: flex;
@@ -21,6 +22,7 @@
 .background-purple{
     background-color: #754CCE;
     color: white !important;
+    height: 100vh;
 }
 
 .background-white{

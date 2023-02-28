@@ -13,7 +13,13 @@ import Gps from "../assets/icons/where.png"
 import logoHeader from "../assets/imgs/logo mood happy 2.png";
 import logoFooter from "../assets/imgs/logo footer.png";
 import plusPromotion from "../assets/imgs/persons/asian.png";
-import psicology from "../assets/imgs/persons/psico.png"
+import psicology from "../assets/imgs/persons/psico.png";
+import estres from "../assets/imgs/persons/estres.png";
+import ansiosa from "../assets/imgs/persons/ansiosa.png";
+import frustracion from "../assets/imgs/persons/frustracion.png";
+import ira from "../assets/imgs/persons/ira.png";
+import miedo from "../assets/imgs/persons/miedo.png";
+import triste from "../assets/imgs/persons/triste.png"
 
 
 export const data = {
@@ -32,6 +38,12 @@ export const data = {
     },
     imgs:{
         "plusPromotion": plusPromotion,
-        "psicology": psicology
+        "psicology": psicology,
+        "estres": estres,
+        "frustracion": frustracion,
+        "ansiosa": ansiosa,
+        "ira": ira,
+        "miedo": miedo,
+        "triste": triste
     }
 }

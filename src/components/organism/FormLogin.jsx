@@ -29,12 +29,12 @@ function FormLogin() {
       <div>
         <form className="inputs-container" ref={formLogin}>
           <Data text='Nombre de Usuario:' type='text' placeholder='username' name="username" />
-          <Data text='Contraña:' type='password' placeholder='password' name="password" />
+          <Data text='Contraseña:' type='password' placeholder='password' name="password" />
           
         </form>
         <div className="span">
           <Span p="¿Aun no tienes cuenta?" />
-          <Link to="/Register">Click</Link>
+          <div><Link to="/Register">Click</Link></div>
         </div>
 
         <div>

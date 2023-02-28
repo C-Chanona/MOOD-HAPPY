@@ -18,7 +18,10 @@ function FormRegister() {
 
         const newUser = new FormData(formRegister.current);
         //fetch
-        
+        fetch("http://52.7.252.226:3000/Users",{
+            method: POST,
+            
+        })
 
 
         navigate('/')
