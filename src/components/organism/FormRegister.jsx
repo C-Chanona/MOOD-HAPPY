@@ -13,18 +13,34 @@ import "../../assets/styles/register.css"
 function FormRegister() {
     const formRegister = useRef();
     const navigate = useNavigate()
+    //const URL = "http://52.7.252.226:3000/Users";
+    const URL = "http://moodhappy.iothings.com.mx:3000/"
     const handlerClick = (e) => {
         e.preventDefault();
 
         const newUser = new FormData(formRegister.current);
         //fetch
-        fetch("http://52.7.252.226:3000/Users",{
-            method: POST,
-            
+        fetch("http://moodhappy.iothings.com.mx:3000/Users/",{
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                name: newUser.get('name'),
+                lastname: newUser.get('lastname'),
+                username: newUser.get('username'),
+                email: newUser.get('email'),
+                password: newUser.get('password')
+            })
         })
-
-
-        navigate('/')
+        .then(response => response.json())
+        .then(data2 =>{
+            //alert(JSON.stringify(data2))
+            if(data2){
+                alert('Se registro correctamente');
+                navigate("/Sign in");
+            }
+        })
     };
 
     return (

@@ -1,6 +1,6 @@
 import Header from "../molecules/Header";
 import Footer from "../molecules/Footer";
-import RowCards from "../organism/RowCards";
+import RowCardsBooks from "../organism/RowCardsBooks";
 
 function Books() {
     return (
@@ -10,8 +10,7 @@ function Books() {
                     <Header />
                 </header>
                 <main>
-                    <RowCards />
-                    <RowCards />
+                    <RowCardsBooks></RowCardsBooks>
                 </main>
                 <footer>
                     <Footer />

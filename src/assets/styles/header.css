@@ -13,7 +13,7 @@
 }
 
 a{
-    color: #FFDA15;
+    color: #FFDA15 !important;
     font-size: x-large;
     text-decoration: none;
 }

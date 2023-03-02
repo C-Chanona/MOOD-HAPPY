@@ -17,9 +17,15 @@ function FormLogin() {
 
     const dataUser = new FormData(formLogin.current);
     //fetch
+    fetch("http://moodhappy.iothings.com.mx:3000/Users/")
+    .then(res => res.json())
+    .then(data2 => {
+      console.log(data2);
+      if(data2){
+        navigate('/')
+      }
+    })
 
-
-    navigate('/');
   };
 
   return (
