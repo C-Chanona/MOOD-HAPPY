@@ -1,5 +1,6 @@
 import Header from "../molecules/Header";
 import Footer from "../molecules/Footer";
+import RowBooks from "../organism/RowBooks";
 
 
 function Books() {
@@ -7,10 +8,10 @@ function Books() {
         <body>
             <body>
                 <header>
-                    <Header />
+                    <Header title='LIBROS' text="Encuentra decenas de libros que te acompañaran"  />
                 </header>
                 <main>
-                    
+                    <RowBooks />
                 </main>
                 <footer>
                     <Footer />

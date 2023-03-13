@@ -1,6 +1,8 @@
 import { Link, useNavigate } from "react-router-dom";
-import { useState, useRef } from "react";
+import {useRef, useContext } from "react";
+import Swal from "sweetalert2"
 
+import userContext from "../../context/UserContext";
 import Logo from "../atoms/Logo";
 import Title from "../atoms/Title";
 import Span from "../atoms/Span";
@@ -11,18 +13,44 @@ import "../../assets/styles/login.css";
 function FormLogin() {
   const formLogin = useRef();
   const navigate = useNavigate();
+  const {isUser, setIsUser} = useContext(userContext);
 
   const handlerClick = (e) => {
     e.preventDefault();
 
     const dataUser = new FormData(formLogin.current);
     //fetch
-    fetch("http://moodhappy.iothings.com.mx:3000/Users/")
+    fetch("https://moodhappy.iothings.com.mx:3000/Users/")
     .then(res => res.json())
     .then(data2 => {
-      console.log(data2);
-      if(data2){
-        navigate('/')
+      //VALIDACION DE USUARIO
+      //busca si el usuario ingresado existe
+      if(data2.find( user => user.username === dataUser.get('username'))){
+        //si lo encuentra lo alistamos en una variable
+        const accountUser = data2.find( user => user.username === dataUser.get('username'));
+        //evalua si la contraseña es la misma que dijito y lo envia al context
+        if(accountUser.password === dataUser.get('password')){
+          setIsUser(accountUser);
+          //<userContext.Provider value={accountUser} />
+          Swal.fire({
+            icon: 'success',
+            title: 'Usuario encontrado!',
+            text: 'Bienvenido de vuelta ' + accountUser.name
+          }).then((result) => {
+            if (result.isConfirmed) {
+              navigate('/')
+            }
+          })
+          
+        }
+        
+      }
+      else{
+        Swal.fire({
+          icon: 'error',
+          title: 'Usuario no encontrado!',
+          text: 'por favor vuelve a intentarlo :(',
+        })
       }
     })
 

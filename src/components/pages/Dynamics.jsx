@@ -8,7 +8,8 @@ function Dynamics() {
         <>
             <body>
                 <header>
-                    <Header />
+                    <Header title='¿MOMENTOS COMPLICADOS?' text="No te preocupes te apoyaremos guiandote con los" 
+                            text2="siguientes tips que serviran para soltar esas emociones" />
                 </header>
                 <main>
                     <RowCards />

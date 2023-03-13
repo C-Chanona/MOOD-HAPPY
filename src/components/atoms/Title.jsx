@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 
 const StyledH1 = styled.h1`
-    /* color: ${(props) => ((props) ? "white": "yellow")}; */
+    //color: ${(props) => ((props.color) ? "white": "yellow")}; 
     text-align: center;
     color: white;
 `;
 
 function Title({text}) {
+    
     /*const prueba = text.indexOf('psicoterapias');
     if(text.slice(26,39) == 'psicoterapias')
     {

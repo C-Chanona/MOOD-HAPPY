@@ -4,8 +4,10 @@ import { data } from "../../data/data";
 import Logo from "../atoms/Logo";
 import Title from "../atoms/Title";
 import "../../assets/styles/header.css"
+import TitleH2 from "../atoms/TitleH2";
+import WelcomePage from "../atoms/WelcomePage";
 
-function Header() {
+function Header({title,text,text2,text3,}) {
     return (
         <>
             <div className="header">
@@ -25,14 +27,15 @@ function Header() {
                         </ul>
                     </nav>
                     <Link  to="/Dynamics">Dinamicas</Link>
+                    <Link to="/Activities">Actividades</Link>
                     <Link  to="/Books">Libros</Link>
                     <Link  to="/Sign In">Iniciar sesion</Link>
                 </div>
                 <div className="welcome"> 
-                    <Title text="BIENVENIDO A MOOD-HAPPY" ></Title>
-                    <Title text="Servicio especializado en psicoterapias online y presencial." />
-                    <Title text="Apoyo emocional de forma dinamica." />
-                    <Title text="Mini curso de tareas para el mejoramiento de mi persona" />
+                    <WelcomePage text={title} />
+                    <Title text={text} />
+                    <Title text={text2} />
+                    <Title text={text3} />
                 </div>
             </div>
             <div className="gradient"></div>

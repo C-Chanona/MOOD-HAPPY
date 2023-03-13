@@ -1,37 +1,15 @@
-.container{
+/* row cards to dynamics and activities */
+.row-cards {
+    box-sizing: border-box;
     width: 100%;
-    border: 2px solid black;
-    text-align: center;
-    flex-wrap: wrap;
-}
-
-.title{
+    padding-left: 3%;
     display: flex;
-    flex-direction: column;
-    width: 100%;
+    flex-wrap: wrap;
+    gap: 2.5%;
 }
 
-.colums{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr );
-    align-items: center;
-    font-size: 1rem;
-}
-
-.media{
-    width: 50%;
-    height: auto;
-}
-
-.buttoncard{
-    width: 100%;
-    height: 40px;
-    background-color: #AE5CFF;
-    border-radius: 30px;
-    color: white;
-}
-
-.modal{
+/* ------------------------MODAL QUE NO USE------------------------ */
+.modal {
     position: fixed;
     top: 0;
     right: 0;
@@ -43,12 +21,12 @@
     pointer-events: none;
 }
 
-.modal-shows{
+.modal-shows {
     opacity: 1;
     pointer-events: unset;
 }
 
-.modal-container{
+.modal-container {
     margin: auto;
     width: 90%;
     max-width: 600px;
@@ -60,8 +38,8 @@
     gap: 1em;
 }
 
-.modal-close{
-    color:white;
+.modal-close {
+    color: white;
     background-color: #AE5CFF;
     padding: 1em 3em;
     border: 1px solid;
@@ -71,7 +49,139 @@
     transition: background-color .3s;
 }
 
-.modal-close:hover{
+.modal-close:hover {
     color: #AE5CFF;
     background-color: white;
+}
+
+/*------------------------CARDS DYNAMIC------------------------*/
+.dynamic-fatter {
+    width: 100%;
+    border: 4px #AE5CFF solid;
+    border-radius: 18px;
+    text-align: center;
+}
+
+.dynamic-child {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.media {
+    width: 50%;
+    height: auto;
+}
+
+.buttoncard {
+    width: 100%;
+    height: 40px;
+    background-color: #AE5CFF;
+    border-radius: 30px;
+    color: white;
+}
+
+/*------------------------CARDS ACTIVITIES------------------------*/
+
+.activities-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+    height: auto;
+    border: 4px #AE5CFF solid;
+    border-radius: 20px;
+    gap: 15px;
+}
+
+.activities-title {
+    width: 90%;
+    height: 30px;
+    background: #6FB8F5;
+    border-radius: 18px;
+    text-align: center;
+    margin: 1%;
+    padding: 2%;
+}
+
+.activities-image {
+    width: 100%;
+    height: 130px;
+    background-image: url("../ilustrations/task.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 130px;
+}
+
+.activities-course {
+    width: 100%;
+    text-align: start;
+}
+
+.activities-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+}
+
+.activities-descriptions-title {
+    width: 100%;
+    text-align: center;
+}
+
+.activities-descriptions-text {
+    width: 80%;
+    text-align: center;
+    margin: 2%;
+}
+
+.activities-button {
+    width: 90%;
+    height: 60px;
+    font-size: 1.3rem;
+    margin: 2%;
+    background: #AE5CFF;
+    border: 2px #AE5CFF solid;
+    border-radius: 20px;
+    color: white;
+}
+
+.activities-button:hover {
+    background: white;
+    color: #AE5CFF;
+    border: 2px #AE5CFF solid;
+}
+
+/*------------------------CARDS BOOKS------------------------*/
+
+.books-containers {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    width: 80%;
+    height: auto;
+    border: 4px #AE5CFF solid;
+    border-radius: 20px;
+}
+
+.books-favorites {
+    width: 100%;
+    align-items: flex-end;
+}
+
+.books-name{
+    text-align: center;
+}
+
+.books-button{
+    width: 60%;
+    height: 32px;
+    background: #AE5CFF;
+    color: white;
+    border: 1px #AE5CFF solid;
+    border-radius: 10px;
+    margin: 5%;
 }

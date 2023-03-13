@@ -28,3 +28,17 @@
 .background-white{
     color: black;
 }
+
+.columns-3{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 15px;
+    margin: 2%;
+}
+
+.columns-5{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 1%;
+    margin: 3%;
+}

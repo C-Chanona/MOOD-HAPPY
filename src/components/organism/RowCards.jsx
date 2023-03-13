@@ -1,19 +1,13 @@
-import styled from 'styled-components';
+
 import CardDynamic from "../molecules/CardDynamic";
 import { data } from "../../data/data";
-
-const StyledRow = styled.div`
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 15px;
-    margin: 2%;
-`;
+import "../../assets/styles/global.css"
 
 //cambiar por un map
 
 function RowCards() {
     return ( 
-        <StyledRow>
+        <div className='columns-3'>
             
             <CardDynamic text='Ira' img={data.imgs.ira} p="La ira lastima no solamente a tu paz mental, 
             tambien puede herir a travez de ti mas de lo que crees, sabemos que no es eso lo que buscas." />
@@ -33,7 +27,7 @@ function RowCards() {
             <CardDynamic text="Miedo" img={data.imgs.miedo} p="El miedo en muchas sicurstancias es buena, pero llega tambien a pergudicar, 
             ya que por el miedo no experimentamos muchas cosas, y nos alejamos cada ves mas de las personas." />
 
-        </StyledRow>
+        </div>
      );
 }
 

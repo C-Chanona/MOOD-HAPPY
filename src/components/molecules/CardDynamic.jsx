@@ -1,50 +1,39 @@
-import { useState } from 'react';
-
-import styled from 'styled-components';
+import Swal from 'sweetalert2';
 import TitleH3 from '../atoms/TitleH3';
 import Img from '../atoms/Img';
 import Span from '../atoms/Span';
-import { Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
-
-
 import "../../assets/styles/cards.css"
 
-const StyledDiv = styled.div`
-    width: 100%;
-    border: 2px solid black;
-    text-align: center;
-`;
-
-const Div = styled.div`
-    display: flex;
-    align-items: center;
-    font-size: 1rem;
-    
-`;
-
 function CardDynamic({ text, img, p }) {
-    const [isOPen, setIsOpen] = useState(false);
 
     const handlerClick = (e) => {
         e.preventDefault();
-        const modal = document.querySelector(".modal");
-        modal.classList.add('modal-shows');
+        // let modal = document.querySelector(".modal");
+        // modal.classList.add('modal-shows');
 
-        //setIsOpen(!isOPen);
+        Swal.fire({
+            title: 'Ira',
+            confirmButtonText: "Cerrar",
+            customClass:{
+                confirmButton:"modal-close"
+            },
+            
+            
+        })
+        
     }
     const handlerClickClose = (e) => {
         e.preventDefault();
-        const modal = document.querySelector(".modal");
-        modal.classList.remove('modal-shows');
+        // let modal = document.querySelector(".modal");
+        // modal.classList.remove('modal-shows');
         
-        //setIsOpen(!isOPen);
     }
 
     return (
         <>
-            <StyledDiv>
+            <div className='dynamic-fatter'>
                 <TitleH3 text={text} />
-                <Div>
+                <div className='dynamic-child'>
                     <div className='media'>
                         <Img image={img} />
                     </div>
@@ -53,12 +42,12 @@ function CardDynamic({ text, img, p }) {
                         <Span p={p} />
                     </div>
 
-                </Div>
+                </div>
                 <div>
                     <button className='buttoncard' onClick={handlerClick}>Leer mas</button>
                 </div>
 
-            </StyledDiv>
+            </div>
 
             <div className="modal">
                 <div className="modal-container">

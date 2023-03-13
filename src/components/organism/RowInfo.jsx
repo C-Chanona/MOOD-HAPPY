@@ -1,19 +1,14 @@
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
 import Title from '../atoms/Title';
 import Span from '../atoms/Span';
 import Icon from '../atoms/Icon';
 import { data } from "../../data/data";
 import "../../assets/styles/global.css"
 
-const StyledRow = styled.div`
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-`;
 
 function RowInfo() {
     return ( 
-        <StyledRow>
+        <div className='columns-3'>
             <div className='div-center-elements'>
                 <Icon icon={data.routes.cloud} />
                 <Title text="¿Qué es Mood-Happy" />
@@ -35,7 +30,7 @@ function RowInfo() {
                         el privilegio de tener acceso al catalogo de audiolibros." />
                 <Link to="/Premium">Clic aqui</Link>
             </div>
-        </StyledRow>
+        </div>
      );
 }
 

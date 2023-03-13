@@ -12,15 +12,11 @@ function Home() {
         <>
             <body>
                 <header>
-                    <Header />
+                    <Header title='Bienvenido a MOOD-HAPPY' text="Servicio especializado en psicoterapias online y presencial." 
+                            text2="Apoyo emocional de forma dinamica." text3="Mini curso de tareas para el mejoramiento de mi persona" />
                 </header>
                 <main>
                     <RowInfo />
-                    <div className="div-left-elements">
-                        <div >
-                            <Img image={data.imgs.plusPromotion} />
-                        </div>
-                    </div>
                     <RowServices />
                     <div className="div-right-elements">
                         <div >

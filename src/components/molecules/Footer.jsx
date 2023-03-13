@@ -23,7 +23,7 @@ function Footer() {
                     <Icon icon={data.routes.face} />
                 </div>
                 <div className="div-image">
-                    <Logo img={data.routes.logoF} />
+                    <Logo img={data.routes.logoH} />
                     <Span p="© 2023 Mood Happy" />
                 </div>
             </div>

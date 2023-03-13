@@ -1,8 +1,7 @@
 .div-content{
-    height: 15%;
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    background-color: #DDDEFF;
+    background-color: #6E41D0;
 }
 
 .div-childs{
@@ -13,11 +12,12 @@
     text-align: center;
     letter-spacing: 1px;
     margin-bottom: 5%;
+    color: white;
 }
 
 .div-border-top{
     margin-top: 10%;
-    border-top: 2px solid black;
+    border-top: 2px solid white;
     line-height: 32px;
 }
 
@@ -39,5 +39,6 @@
     flex-direction: column;
     align-items: center;
     margin-left: 25%;
+    color: white;
     /* border: 2px solid black; */
 }
