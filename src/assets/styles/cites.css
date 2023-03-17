@@ -1,0 +1,15 @@
+.nav-cites{
+    display: flex;
+    background: #8f4fe8a8;
+    border-radius: 10px;
+    width: 60%;
+    height: 5pc;
+    font-size: 1.8rem;
+}
+
+.child{
+    width: 33.3% ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

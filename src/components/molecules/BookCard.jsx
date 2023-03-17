@@ -4,7 +4,7 @@ import Icon from "../atoms/Icon";
 import { data } from "../../data/data";
 import "../../assets/styles/cards.css";
 
-function BookCard() {
+function BookCard({img, nameBook}) {
     return ( 
         <>
             <div className="books-containers">
@@ -12,10 +12,10 @@ function BookCard() {
                     <Icon icon={data.routes.love} />
                 </div>
                 <div>
-                    <Img image={data.books.book1} />
+                    <Img image={img} />
                 </div>
                 <div className="books-name">
-                    <TitleH4 text="La inteligencia emocional" />
+                    <TitleH4 text={nameBook} />
                 </div>
                 <button className="books-button">Leer</button>
             </div>

@@ -9,6 +9,8 @@ import Alumn from "../assets/icons/alumn.png";
 import HeadIdea from "../assets/icons/headIdea.png";
 import Gps from "../assets/icons/where.png";
 import heart from "../assets/icons/love.svg";
+import video from "../assets/icons/video.svg";
+import building from "../assets/icons/building.svg";
 
 //IMAGENES
 import logoHeader from "../assets/imgs/logo mood happy 2.png";
@@ -40,6 +42,8 @@ export const data = {
         "gps":Gps,
         "alumn": Alumn,
         "love": heart,
+        "video": video,
+        "building": building,
     },
     imgs:{
         "plusPromotion": plusPromotion,

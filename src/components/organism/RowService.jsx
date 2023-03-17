@@ -6,14 +6,19 @@ import { data } from "../../data/data";
 import "../../assets/styles/global.css"
 
 const StyledRow = styled.div`
-    height: 18vh;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     background-color: #AE5CFF;
+
+    @media screen and (min-width: 320px) and (max-width: 728px) {
+        display: flex;
+        flex-direction: column;
+        
+    }
 `;
 
 function RowServices() {
-    return ( 
+    return (
         <StyledRow>
             <div className='div-center-elements'>
                 <Icon icon={data.routes.alumn} />
@@ -26,13 +31,19 @@ function RowServices() {
                 <Span p="Cada caso es unico, abordando las terapias con tecnicas apropiadas." />
             </div>
             <div className='div-center-elements'>
-                <Icon icon={data.routes.gps} />
-                <TitleH3 text="Psicologos en Tuxtla Gutierrez Centro" />
-                <Span p="Situados en Tuxtla Gutierrez Centro en diferentes puntos del primer plano de la ciudad" />
+                <div>
+                    <Icon icon={data.routes.gps} />
+                </div>
+                <div>
+                    <TitleH3 text="Psicologos en Tuxtla Gutierrez Centro" />
+                </div>
+                <div>
+                    <Span p="Situados en Tuxtla Gutierrez Centro en diferentes puntos del primer plano de la ciudad" />
+                </div>
 
             </div>
         </StyledRow>
-     );
+    );
 }
 
 export default RowServices;

@@ -4,6 +4,10 @@ const StyledH1 = styled.h1`
     //color: ${(props) => ((props.color) ? "white": "yellow")}; 
     text-align: center;
     color: white;
+
+    @media screen and (min-width: 320px) and (max-width: 720px) {
+        font-size: 1.6rem;
+    }
 `;
 
 function Title({text}) {

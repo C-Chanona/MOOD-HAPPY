@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const StyledLabel = styled.label`
     color: white;
-    font-size: 1rem;
+    font-size: 1.8rem;
 `;
 
 

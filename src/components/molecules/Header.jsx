@@ -4,7 +4,6 @@ import { data } from "../../data/data";
 import Logo from "../atoms/Logo";
 import Title from "../atoms/Title";
 import "../../assets/styles/header.css"
-import TitleH2 from "../atoms/TitleH2";
 import WelcomePage from "../atoms/WelcomePage";
 
 function Header({title,text,text2,text3,}) {

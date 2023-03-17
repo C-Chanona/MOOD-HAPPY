@@ -53,7 +53,7 @@ function FormRegister() {
                     <Data text='Nombre:' type='text' placeholder='Name' name="name" />
                     <Data text='Apellido:' type='text' placeholder='Lastname' name="lastname" />
                     <Data text='Nombre de usuario:' type='text' placeholder='Username' name='username' />
-                    <Data text='Correo' type='email' placeholder='Email' name='email' />
+                    <Data text='Correo:' type='email' placeholder='Email' name='email' />
                     <Data text='Contraseña:' type='password' placeholder='Password' name='password' />
                     <Data text='Confirmar Contraseña:' type='password' placeholder='Password' name='conPass' />
                 </form>

@@ -5,13 +5,30 @@
 }
 
 .button{
-    width: 100%;
+    width: 90%;
     height: 60.16px;
     background: #AE5CFF;
+    border-color: #AE5CFF;
     border-radius: 20px;
-    font-size: 1rem;
+    font-size: 1.8rem;
+    color: white;
+    font-weight: bold;
+}
+
+.button:hover{
+    background-color: white;
+    border: 2px #AE5CFF solid;
+    color: #AE5CFF;
+    font-weight: bold;
 }
 
 .divs{
     width: 50%;
+}
+
+.logo-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }

@@ -8,64 +8,22 @@
     gap: 2.5%;
 }
 
-/* ------------------------MODAL QUE NO USE------------------------ */
-.modal {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    background-color: #111111bd;
-    display: flex;
-    opacity: 0;
-    pointer-events: none;
-}
-
-.modal-shows {
-    opacity: 1;
-    pointer-events: unset;
-}
-
-.modal-container {
-    margin: auto;
-    width: 90%;
-    max-width: 600px;
-    max-height: 90%;
-    background-color: #fff;
-    border-radius: 6px;
-    padding: 3em 2.5em;
-    display: grid;
-    gap: 1em;
-}
-
-.modal-close {
-    color: white;
-    background-color: #AE5CFF;
-    padding: 1em 3em;
-    border: 1px solid;
-    border-radius: 6px;
-    display: inline-block;
-    font-weight: 300;
-    transition: background-color .3s;
-}
-
-.modal-close:hover {
-    color: #AE5CFF;
-    background-color: white;
-}
-
 /*------------------------CARDS DYNAMIC------------------------*/
 .dynamic-fatter {
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
     border: 4px #AE5CFF solid;
     border-radius: 18px;
     text-align: center;
+    font-size: 1.8rem;
 }
 
 .dynamic-child {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    font-size: 1rem;
 }
 
 .media {
@@ -73,12 +31,26 @@
     height: auto;
 }
 
+.div-button{
+    border: 1px black solid;
+    width: 80%;
+}
+
 .buttoncard {
     width: 100%;
     height: 40px;
     background-color: #AE5CFF;
+    border: 2px #AE5CFF solid;
     border-radius: 30px;
     color: white;
+    margin-top: 5%;
+    font-size: 1.8rem;
+}
+
+.buttoncard:hover{
+    border: 2px #6E41D0 solid;
+    font-weight: bold;
+    background: #6E41D0;
 }
 
 /*------------------------CARDS ACTIVITIES------------------------*/
@@ -93,6 +65,7 @@
     border: 4px #AE5CFF solid;
     border-radius: 20px;
     gap: 15px;
+    font-size: 1.8rem;
 }
 
 .activities-title {
@@ -141,7 +114,7 @@
 .activities-button {
     width: 90%;
     height: 60px;
-    font-size: 1.3rem;
+    font-size: 1.8rem;
     margin: 2%;
     background: #AE5CFF;
     border: 2px #AE5CFF solid;
@@ -150,9 +123,8 @@
 }
 
 .activities-button:hover {
-    background: white;
-    color: #AE5CFF;
-    border: 2px #AE5CFF solid;
+    background: #6E41D0;
+    border: 2px #6E41D0 solid;
 }
 
 /*------------------------CARDS BOOKS------------------------*/
@@ -165,11 +137,13 @@
     height: auto;
     border: 4px #AE5CFF solid;
     border-radius: 20px;
+    font-size: 1.8rem;
 }
 
 .books-favorites {
+    display: flex;
+    justify-content: flex-end;
     width: 100%;
-    align-items: flex-end;
 }
 
 .books-name{
@@ -184,4 +158,57 @@
     border: 1px #AE5CFF solid;
     border-radius: 10px;
     margin: 5%;
+}
+
+.books-button:hover{
+    background-color: #6E41D0;
+    border: #6E41D0 solid 2px;
+    font-weight: bolder;
+}
+
+
+/* ------------------------MODAL QUE NO USE------------------------ */
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #111111bd;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal-shows {
+    opacity: 1;
+    pointer-events: unset;
+}
+
+.modal-container {
+    margin: auto;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90%;
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 3em 2.5em;
+    display: grid;
+    gap: 1em;
+}
+
+.modal-close {
+    color: white;
+    background-color: #AE5CFF;
+    padding: 1em 3em;
+    border: 1px solid;
+    border-radius: 6px;
+    display: inline-block;
+    font-weight: 300;
+    transition: background-color .3s;
+}
+
+.modal-close:hover {
+    color: #AE5CFF;
+    background-color: white;
 }

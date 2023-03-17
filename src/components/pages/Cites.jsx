@@ -1,5 +1,10 @@
 import Header from "../molecules/Header";
 import Footer from "../molecules/Footer";
+import NavCites from "../molecules/NavCites";
+import Img from "../atoms/Img";
+
+import "../../assets/styles/cites.css";
+import "../../assets/styles/global.css";
 
 function Cites() {
     return ( 
@@ -8,9 +13,10 @@ function Cites() {
                 <Header title='AGENDA TU CITA' text="En Tuxtla Gutierrez te estamos esperando para escucharte" 
                         text2=" hablar y comprender tu situacion" />
             </header>
-
+            <nav className="div-center-elements">
+                <NavCites />
+            </nav>
             <main>
-
             </main>
 
             <footer>

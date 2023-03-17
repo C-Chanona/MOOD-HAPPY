@@ -12,21 +12,21 @@ function CardDynamic({ text, img, p }) {
         // modal.classList.add('modal-shows');
 
         Swal.fire({
-            title: 'Ira',
+            title: text,
             confirmButtonText: "Cerrar",
-            customClass:{
-                confirmButton:"modal-close"
+            customClass: {
+                confirmButton: "modal-close"
             },
-            
-            
+
+
         })
-        
+
     }
     const handlerClickClose = (e) => {
         e.preventDefault();
         // let modal = document.querySelector(".modal");
         // modal.classList.remove('modal-shows');
-        
+
     }
 
     return (
@@ -35,18 +35,18 @@ function CardDynamic({ text, img, p }) {
                 <TitleH3 text={text} />
                 <div className='dynamic-child'>
                     <div className='media'>
-                        <Img image={img} />
+                        <div>
+                            <Img image={img} />
+                        </div>
+                        <div>
+                            <TitleH3 text="Descripcion"></TitleH3>
+                        </div>
+                        <div>
+                            <Span p={p} />
+                        </div>
+                        <button className='buttoncard' onClick={handlerClick}>Leer mas</button>
                     </div>
-                    <div className='media'>
-                        <TitleH3 text="Descripcion"></TitleH3>
-                        <Span p={p} />
-                    </div>
-
                 </div>
-                <div>
-                    <button className='buttoncard' onClick={handlerClick}>Leer mas</button>
-                </div>
-
             </div>
 
             <div className="modal">

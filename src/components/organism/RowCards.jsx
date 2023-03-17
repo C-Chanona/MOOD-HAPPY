@@ -1,4 +1,4 @@
-
+import { useState, useEffect } from "react";
 import CardDynamic from "../molecules/CardDynamic";
 import { data } from "../../data/data";
 import "../../assets/styles/global.css"
@@ -6,15 +6,28 @@ import "../../assets/styles/global.css"
 //cambiar por un map
 
 function RowCards() {
+
+    const [dynamics, setDynamic] = useState([]);
+
+    useEffect(() => {
+        fetch("https://moodhappy.iothings.com.mx:3000/Dynamics/")
+        .then(res => res.json())
+        .then(data => {
+            setDynamic(data);
+        })
+    }, [])
     return ( 
         <div className='columns-3'>
+
+            {
+                dynamics.map(dynamic => <CardDynamic 
+                    key={dynamic.id} 
+                    text={dynamic.name} 
+                    img={dynamic.image} 
+                    p={dynamic.description.desGeneral} /> )
+            }
             
-            <CardDynamic text='Ira' img={data.imgs.ira} p="La ira lastima no solamente a tu paz mental, 
-            tambien puede herir a travez de ti mas de lo que crees, sabemos que no es eso lo que buscas." />
-
-            <CardDynamic text="Estres" img={data.imgs.estres} p="El estres puede afectar de manera fisica y mental conforme a tus actividades, 
-            aqui te contamos como sobre pasar este mal rato." />
-
+            {/*
             <CardDynamic text="Tristeza" img={data.imgs.triste} p="La tristeza ocaciona el rezaso social lo cual conlleva a tener 
             soprepensamientos u otras actitudes perjudiciales a tu persona, sabemos que estas pasando por un mal rato asi que permitenos ayudarte." />
 
@@ -25,7 +38,7 @@ function RowCards() {
             es que la ansiedad es el primer paso a la frustracion ya que esto conlleva que mental-mente no se piense de la mejor manera " />
 
             <CardDynamic text="Miedo" img={data.imgs.miedo} p="El miedo en muchas sicurstancias es buena, pero llega tambien a pergudicar, 
-            ya que por el miedo no experimentamos muchas cosas, y nos alejamos cada ves mas de las personas." />
+            ya que por el miedo no experimentamos muchas cosas, y nos alejamos cada ves mas de las personas." /> */}
 
         </div>
      );
