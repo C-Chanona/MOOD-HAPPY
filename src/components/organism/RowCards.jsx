@@ -1,9 +1,6 @@
 import { useState, useEffect } from "react";
 import CardDynamic from "../molecules/CardDynamic";
-import { data } from "../../data/data";
-import "../../assets/styles/global.css"
-
-//cambiar por un map
+import "../../assets/styles/global.css";
 
 function RowCards() {
 

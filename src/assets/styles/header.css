@@ -10,13 +10,6 @@
     font-size: 1.8rem;
 }
 
-a{
-    color: #FFDA15 !important;
-    font-size: x-large;
-    text-decoration: none;
-}
-
-
 .icon {
     width: auto;
     height: 35%;
@@ -41,6 +34,17 @@ a{
     background: linear-gradient(180deg, rgba(110, 65, 208, 0.68) 0%, rgba(142, 79, 232, 0) 100%);
     width: 100%;
     height: 6vh;
+}
+
+.open-menu,
+.close-menu{
+    display: none;
+}
+
+a{
+    color: #FFDA15 !important;
+    font-size: x-large;
+    text-decoration: none;
 }
 
 #menu ul {
@@ -69,8 +73,6 @@ a{
 
 #menu li {
     position: relative;
-    margin: 0;
-    padding: 0;
 }
 
 /* efecto al pasar el ratón por los items del menu */
@@ -108,14 +110,54 @@ a:hover, a:focus {
 /* HEADER MOBILE */
 
 @media screen and (min-width: 320px) and (max-width:728px) {
-    html{
-        font-size: 62.5%;
+
+    .welcome{
+        display: none;
+    }
+
+    .open-menu{
+        width: 50px;
+        height: 50px;
+        display: block;
+        border: none;
+        font-size: 1.5rem;
+        background-image: url("../icons/Menu.svg");
+        background-color: transparent;
+        background-repeat: no-repeat;
+        cursor: pointer;
+
+    }
+    .close-menu{
+        width: 50px;
+        height: 50px;
+        display: block;
+        border: none;
+        font-size: 1.5rem;
+        background-image: url("../icons/close.png");
+        background-color: transparent;
+        background-repeat: no-repeat;
+        cursor: pointer;
     }
 
     .items-center{
-        display: none;
+        opacity: 0;
+        visibility: hidden;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 100%;
+        height: 100%;
+        padding: 1rem;
+        background-color: rgb(50, 48, 48);
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
     }
-    .welcome{
-        display: none;
+
+    #menu a {
+        padding: 0px;
+        letter-spacing: 0;
+    }
+
+    .items-center.visible{
+        opacity: 1;
+        visibility: visible;
     }
 }

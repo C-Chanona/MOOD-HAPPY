@@ -4,7 +4,7 @@ import { data } from "../../data/data";
 function NavCites() {
     return (
         <div className="nav-cites">
-            <div className="child">
+            <div className="child" id="child">
                 <div>
                     <Icon icon={data.routes.building} />
                 </div>
@@ -13,7 +13,7 @@ function NavCites() {
                 </div>
             </div>
 
-            <div className="child">
+            <div className="child" id="child2">
                 <div>
                     <Icon icon={data.routes.video} />
                 </div>
@@ -21,7 +21,7 @@ function NavCites() {
                     <Span p="Terapia en linea" />
                 </div>
             </div>
-            <div className="child">
+            <div className="child" id="child3">
                 <Span p="Servicio" />
             </div>
         </div>

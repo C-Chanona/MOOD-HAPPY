@@ -1,14 +1,14 @@
 import ActCard from "../molecules/ActCard";
-import "../../assets/styles/cards.css";
+import "../../assets/styles/global.css";
 
 function Courses() {
-    return ( 
-        <div className="row-cards">
+    return (
+        <div className="columns-3">
             <ActCard />
             <ActCard />
             <ActCard />
         </div>
-     );
+    );
 }
 
 export default Courses;

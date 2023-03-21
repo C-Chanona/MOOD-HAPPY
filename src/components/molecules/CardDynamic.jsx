@@ -13,11 +13,11 @@ function CardDynamic({ text, img, p }) {
 
         Swal.fire({
             title: text,
+            text: p,
             confirmButtonText: "Cerrar",
             customClass: {
                 confirmButton: "modal-close"
             },
-
 
         })
 
@@ -47,15 +47,7 @@ function CardDynamic({ text, img, p }) {
                         <button className='buttoncard' onClick={handlerClick}>Leer mas</button>
                     </div>
                 </div>
-            </div>
-
-            <div className="modal">
-                <div className="modal-container">
-                    <Img></Img>
-                    <h2 className="">hola mundo</h2>
-                    <button className="modal-close" onClick={handlerClickClose}>Cerrar</button>
-                </div>
-            </div>
+            </div> 
         </>
 
     );

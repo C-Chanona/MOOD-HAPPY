@@ -8,9 +8,13 @@ import IdeaAdjust from "../assets/icons/Project Management.png";
 import Alumn from "../assets/icons/alumn.png";
 import HeadIdea from "../assets/icons/headIdea.png";
 import Gps from "../assets/icons/where.png";
-import heart from "../assets/icons/love.svg";
-import video from "../assets/icons/video.svg";
-import building from "../assets/icons/building.svg";
+import Love from "../assets/icons/Love.svg";
+import LoveFav from "../assets/icons/LoveFav.svg";
+import Video from "../assets/icons/video.svg";
+import Building from "../assets/icons/building.svg";
+import Google from "../assets/icons/GoogleMaps.svg";
+import Menu from "../assets/icons/menu.svg";
+import Close from "../assets/icons/Close.svg";
 
 //IMAGENES
 import logoHeader from "../assets/imgs/logo mood happy 2.png";
@@ -22,12 +26,10 @@ import frustracion from "../assets/imgs/persons/frustracion.png";
 import ira from "../assets/imgs/persons/ira.png";
 import miedo from "../assets/imgs/persons/miedo.png";
 import triste from "../assets/imgs/persons/triste.png";
+import photo from "../../../../../D.I/C3/Usuario Psicologo1.jpg"
 
 //ILUSTRACIONES
 import task from "../assets/ilustrations/task.svg"
-
-//Books
-import b1 from "../assets/imgs/Books/b1.svg";
 
 export const data = {
     routes:{
@@ -41,9 +43,13 @@ export const data = {
         "headIdea": HeadIdea,
         "gps":Gps,
         "alumn": Alumn,
-        "love": heart,
-        "video": video,
-        "building": building,
+        "love": Love,
+        "loveFav": LoveFav,
+        "video": Video,
+        "building": Building,
+        "google": Google,
+        "menu" : Menu,
+        "close": Close,
     },
     imgs:{
         "plusPromotion": plusPromotion,
@@ -53,12 +59,10 @@ export const data = {
         "ansiosa": ansiosa,
         "ira": ira,
         "miedo": miedo,
-        "triste": triste
+        "triste": triste,
+        "photo": photo,
     },
     ilustrations:{
         "task": task,
     },
-    books:{
-        "book1": b1
-    }
 }
