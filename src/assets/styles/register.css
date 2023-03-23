@@ -1,34 +1,85 @@
-.div-father{
+.div-father {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo-regist {
+    width: 50%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.form-regist {
+    width: 50%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.button{
+.inputs-regist {
+    width: 80%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    letter-spacing: .2rem;
+}
+
+.text-confirm-info {
+    width: 80%;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.button-position {
+    width: 80%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+}
+
+.button {
     width: 90%;
-    height: 60.16px;
+    height: 83%;
     background: #AE5CFF;
-    border-color: #AE5CFF;
+    border: 4px #AE5CFF solid;
     border-radius: 20px;
     font-size: 1.8rem;
     color: white;
+    letter-spacing: .2rem;
+}
+
+.button:hover {
+    background-color: #4E34B8;
     font-weight: bold;
 }
 
-.button:hover{
-    background-color: white;
-    border: 2px #AE5CFF solid;
-    color: #AE5CFF;
-    font-weight: bold;
-}
+@media screen and (min-width:320px) and (max-width: 728px) {
 
-.divs{
-    width: 50%;
-}
+    .div-father {
+        height: auto;
+    }
 
-.logo-center{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    .logo-regist,
+    .form-regist {
+        width: 100%;
+    }
+
+    .form-regist {
+        height: 80vh;
+    }
+
+    .text-confirm-info {
+        width: 60%;
+        font-size: 1.1rem;
+    }
 }

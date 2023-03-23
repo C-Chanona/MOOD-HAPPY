@@ -29,7 +29,7 @@ function RowInfo() {
         <div className='columns-3'>
             <div className='div-center-elements'>
                 <Icon icon={data.routes.cloud} />
-                <Title text="¿Qué es Mood-Happy" color="black" />
+                <Title text="¿Qué es Mood-Happy?" color="black" />
                 <Span p="Mood happy es una aplicación de autoayuda gratuita para las personas con problemas de ansiedad, estres, 
                         depresion entre muchos otros conflictos emocionales que se pueden llegar a tener. " />
                 <button className='buttoncard' onClick={handlerClickKnow}>Conocer mas</button>

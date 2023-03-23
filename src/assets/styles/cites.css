@@ -40,7 +40,7 @@
 
 .button-cite{
     width: 20%;
-    height: 40px;
+    height: 5vh;
     color: white;
     background: #AE5CFF;
     border-radius: 10px;
@@ -96,6 +96,9 @@
     #child2,#child3{
         display: none;
     }
+    .container{
+        height: auto;
+    }
     .child{
         margin-left: 5%;
     }
@@ -106,9 +109,12 @@
 
     .name-psyco{
         width: 100%;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
     }
     .button-cite{
         width: 90%;
+        margin-bottom: 1rem;
     }
 
     .address{

@@ -1,8 +1,10 @@
 import { useRef } from "react";
-import { useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 import Logo from "../atoms/Logo";
 import Data from "../molecules/Data";
+import Span from "../atoms/Span";
 
 import { data } from "../../data/data";
 
@@ -13,14 +15,12 @@ import "../../assets/styles/register.css"
 function FormRegister() {
     const formRegister = useRef();
     const navigate = useNavigate()
-    //const URL = "http://52.7.252.226:3000/Users";
-    const URL = "http://moodhappy.iothings.com.mx:3000/"
     const handlerClick = (e) => {
         e.preventDefault();
 
         const newUser = new FormData(formRegister.current);
         //fetch
-        fetch("http://moodhappy.iothings.com.mx:3000/Users/",{
+        fetch("https://moodhappy.iothings.com.mx:3000/Users/", {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json"
@@ -33,23 +33,29 @@ function FormRegister() {
                 password: newUser.get('password')
             })
         })
-        .then(response => response.json())
-        .then(data2 =>{
-            //alert(JSON.stringify(data2))
-            if(data2){
-                alert('Se registro correctamente');
-                navigate("/Sign in");
-            }
-        })
+            .then(response => response.json())
+            .then(data2 => {
+                if (data2) {
+                    Swal.fire({
+                        icon: 'success',
+                        title: '¡Registro completo!',
+                        text: 'Gracias por ser parte de Mood-Happy =) '
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            navigate("/Sign in");
+                        }
+                    });
+                }
+            });
     };
 
     return (
         <div className="div-father">
-            <div>
+            <div className="logo-regist">
                 <Logo img={data.routes.logoH} />
             </div>
-            <div className="divs">
-                <form ref={formRegister}>
+            <div className="form-regist">
+                <form className="inputs-regist" ref={formRegister}>
                     <Data text='Nombre:' type='text' placeholder='Name' name="name" />
                     <Data text='Apellido:' type='text' placeholder='Lastname' name="lastname" />
                     <Data text='Nombre de usuario:' type='text' placeholder='Username' name='username' />
@@ -57,10 +63,14 @@ function FormRegister() {
                     <Data text='Contraseña:' type='password' placeholder='Password' name='password' />
                     <Data text='Confirmar Contraseña:' type='password' placeholder='Password' name='conPass' />
                 </form>
+                <div className="text-confirm-info">
+                    <Span p="Al hacer clic en Confirmar, aceptas las Condiciones y confirmas que has leido nuestra Politica de privacidad incluido los Terminos de servicio" />
+                </div>
+                <div className="button-position">
+                    <button className="button" onClick={handlerClick}>Confirmar</button>
+                </div>
             </div>
-            <div className="divs">
-                <button className="button" onClick={handlerClick}>Confirmar</button>
-            </div>
+
         </div>
     );
 }

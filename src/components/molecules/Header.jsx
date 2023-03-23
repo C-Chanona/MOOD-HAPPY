@@ -9,7 +9,7 @@ import WelcomePage from "../atoms/WelcomePage";
 
 function Header({ title, text, text2, text3, }) {
 
-    const [isOpen,setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
 
     const handlerClick = (e) => {
         e.preventDefault();
@@ -24,7 +24,9 @@ function Header({ title, text, text2, text3, }) {
                     <Logo img={data.routes.logoH} />
                 </div>
                 <div>
-                    <button className="open-menu" onClick={handlerClick}></button>
+                    <div className="menu-left">
+                        <button className="open-menu" onClick={handlerClick} id="menu-burger" ></button>
+                    </div>
                     <div className={`items-center ${isOpen ? 'visible' : ""} `} id="colors">
                         <button className="close-menu" onClick={handlerClick}></button>
                         <Link to="/"> Inicio</Link>
