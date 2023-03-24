@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 const StyledLabel = styled.label`
     color: white;
+    color: ${props => props.color};
     font-size: 1.8rem;
 
     @media screen and (min-width: 320px) and (max-width: 728px) {
@@ -10,9 +11,9 @@ const StyledLabel = styled.label`
 `;
 
 
-function Label({text}) {
+function Label({text, color}) {
     return ( 
-        <StyledLabel>{text}</StyledLabel>
+        <StyledLabel color={color}>{text}</StyledLabel>
      );
 }
 

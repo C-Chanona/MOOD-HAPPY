@@ -18,7 +18,7 @@ function Cites() {
             </nav>
             <main>
                 <Psycologist />
-                <Psycologist />
+                
             </main>
 
             <footer>

@@ -111,6 +111,8 @@ a:hover, a:focus {
 
 @media screen and (min-width: 320px) and (max-width:728px) {
 
+   
+
     .welcome{
         display: none;
     }

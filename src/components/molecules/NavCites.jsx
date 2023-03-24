@@ -1,6 +1,10 @@
+import { Link } from "react-router-dom";
+
 import Span from "../atoms/Span";
 import Icon from "../atoms/Icon";
+
 import { data } from "../../data/data";
+
 function NavCites() {
     return (
         <div className="nav-cites">
@@ -9,7 +13,7 @@ function NavCites() {
                     <Icon icon={data.routes.building} />
                 </div>
                 <div>
-                    <Span p="Terapia Presencial" />
+                    <Link to="/cites" id="navCite" >Terapia Presencial</Link>
                 </div>
             </div>
 
@@ -18,11 +22,11 @@ function NavCites() {
                     <Icon icon={data.routes.video} />
                 </div>
                 <div>
-                    <Span p="Terapia en linea" />
+                    <Link to="https://meet.google.com/" id="navCite" >Terapia en Linea</Link>
                 </div>
             </div>
             <div className="child" id="child3">
-                <Span p="Servicio" />
+                <Link to="/aboutWe" id="navCite" >Servicio</Link>
             </div>
         </div>
     );
