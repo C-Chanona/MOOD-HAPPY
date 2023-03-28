@@ -1,9 +1,18 @@
-import "../../assets/styles/global.css";
+import styled from 'styled-components';
+
+const StyledImg = styled.img`
+    width: ${props => props.sizing ? "35%" : "100%" };
+    height: 100%;
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+        width: 85%;
+        height: 85%;
+    }
+`;
 
 
-function Logo( {img}) {
+function Logo( {img, size}) {
     return ( 
-        <img className='logo' src={img} alt="" />
+        <StyledImg sizing={size} src={img} />
      );
 }
 

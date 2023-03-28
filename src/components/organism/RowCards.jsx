@@ -21,7 +21,8 @@ function RowCards() {
                     key={dynamic.id} 
                     text={dynamic.name} 
                     img={dynamic.image} 
-                    p={dynamic.description.desGeneral} /> )
+                    p={dynamic.description}
+                    imageDes={dynamic.imagesDes} /> )
             }
             
             {/*

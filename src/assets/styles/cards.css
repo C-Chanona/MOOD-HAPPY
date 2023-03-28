@@ -1,3 +1,57 @@
+/* ------------------------MODAL Cita------------------------ */
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #111111bd;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .6s .3s;
+    --transform: translateY(-100vh);
+    --transition: transform .8s;
+}
+
+.modal-shows {
+    opacity: 1;
+    pointer-events: unset;
+    transition: opacity .6s;
+    --transform: translateY(0);
+    --transition: transform .6s .3s;
+}
+
+.modal-container {
+    margin: auto;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90%;
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 3em 2.5em;
+    display: grid;
+    gap: 1em;
+    transform: var(--transform);
+    transition: var(--transition);
+
+}
+
+.modal-close {
+    color: white;
+    background-color: #AE5CFF;
+    padding: 1em 3em;
+    border: 1px solid;
+    border-radius: 20px;
+    display: inline-block;
+    font-weight: bo;
+    transition: background-color .3s;
+}
+
+.modal-close:hover {
+    color: white;
+    background-color: rgb(7, 235, 90);;
+}
 
 
 /*------------------------CARDS DYNAMIC------------------------*/
@@ -85,6 +139,7 @@
 .activities-course {
     width: 100%;
     text-align: start;
+    margin-left: 6%;
 }
 
 .activities-description {
@@ -134,7 +189,7 @@
     flex-direction:column;
     align-items: center;
     width: 80%;
-    height: auto;
+    height: 100%;
     border: 4px #AE5CFF solid;
     border-radius: 20px;
     font-size: 1.8rem;
@@ -144,6 +199,7 @@
     display: flex;
     justify-content: flex-end;
     width: 100%;
+    height: 100%;
 }
 
 .books-name{
@@ -166,9 +222,24 @@
     font-weight: bolder;
 }
 
+.books-love-button{
+    width: 20%;
+    height: 90%;
+    display: block;
+    border: none;
+    background-image: url("../icons/Love.svg");
+    background-color: transparent;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
 
-/* ------------------------MODAL QUE NO USE------------------------ */
-.modal {
+.books-love-button:hover{
+    background-image: url("../icons/LoveFav.svg");
+}
+
+
+/* ------------------------MODAL CARDS------------------------ */
+.modal-cards {
     position: fixed;
     top: 0;
     right: 0;
@@ -178,35 +249,38 @@
     display: flex;
     opacity: 0;
     pointer-events: none;
-    transition: opacity .6s .3s;
-    --transform: translateY(-100vh);
-    --transition: transform .8s;
+    transition: opacity .2s .1s;
 }
 
-.modal-shows {
+.modal-shows-cards {
     opacity: 1;
     pointer-events: unset;
-    transition: opacity .6s;
-    --transform: translateY(0);
-    --transition: transform .6s .3s;
+    transition: opacity .4s;
 }
 
-.modal-container {
+.modal-container-cards {
     margin: auto;
     width: 90%;
-    max-width: 600px;
+    max-width: 488px;
     max-height: 90%;
     background-color: #fff;
     border-radius: 6px;
     padding: 3em 2.5em;
     display: grid;
     gap: 1em;
-    transform: var(--transform);
-    transition: var(--transition);
-
+    overflow-y: scroll;
 }
 
-.modal-close {
+.modal-container-cards::-webkit-scrollbar{
+    width: 9px;
+}
+
+.modal-container-cards::-webkit-scrollbar-thumb{
+    background: #AE5CFF;
+    border-radius: 10px;
+}
+
+.modal-close-cards {
     color: white;
     background-color: #AE5CFF;
     padding: 1em 3em;
@@ -217,14 +291,30 @@
     transition: background-color .3s;
 }
 
-.modal-close:hover {
+.modal-close-cards:hover {
     color: white;
-    background-color: rgb(7, 235, 90);;
+    background-color: #4E34B8;
 }
 
+.content{
+    display: flex;
+    flex-direction: column;
+}
+
+.image-right{
+    margin-top: 3%;
+    width: 50%;
+}
+
+.image-left{
+    margin-top: 3%;
+    width: 50%;
+    margin-left: auto;
+}
 
 @media screen and (min-width: 320px) and (max-width: 768px) {
     .modal-container{
         padding: 2em 1.5em;
     }
+
 }

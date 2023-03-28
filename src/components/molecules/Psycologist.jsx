@@ -12,7 +12,7 @@ function Psycologist({ name, photo, address }) {
 
 
     const [formVisible, setFormVisible] = useState(false);
-    const form = useRef();
+    const formCite = useRef();
 
     const handlerClick = (e) => {
         e.preventDefault();
@@ -23,7 +23,7 @@ function Psycologist({ name, photo, address }) {
     const handlerClickConfirm = (e) => {
 
         setFormVisible(!formVisible);
-        const cite = new FormData(form.current);
+        const cite = new FormData(formCite.current);
     }
     const handlerClickAddress = (e) => {
         e.preventDefault();
@@ -53,7 +53,7 @@ function Psycologist({ name, photo, address }) {
 
             <div className={`modal ${formVisible ? 'modal-shows' : ''}`} >
                 <div className="modal-container">
-                    <form>
+                    <form ref={formCite}>
                         <Data text="Paciente" type="text" placeholder="Username" name="paciente" color="green" />
                         <Data text="Edad" type="text" placeholder="age" name="age" color="green" />
                         <Data text="Hora" type="time" placeholder="hora" name="hour" color="green" />

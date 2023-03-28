@@ -2,13 +2,13 @@ import { useState, useEffect } from "react";
 
 import BookCard from "../molecules/BookCard";
 import "../../assets/styles/global.css"
+import { data } from "../../data/data";
 
 function RowBooks() {
 
     const [books, setBooks] = useState([]);
     //useEffect se ejecuta despues del primer renderizado
     useEffect(() => {
-        console.log("antes del useEffect");
         fetch("https://moodhappy.iothings.com.mx:3000/Books/")
             .then(res => res.json())
             .then(data => {

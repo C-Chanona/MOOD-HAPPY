@@ -1,6 +1,6 @@
 
 .header {
-    width: 100%;
+    width: auto;
     height: 528px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../imgs/bannerHeaderM.png");
     background-repeat: no-repeat;
@@ -13,7 +13,7 @@
 .icon {
     width: auto;
     height: 35%;
-    margin-top: 20%;
+    margin-top: 15%;
 }
 
 .items-center {
@@ -111,8 +111,6 @@ a:hover, a:focus {
 
 @media screen and (min-width: 320px) and (max-width:728px) {
 
-   
-
     .welcome{
         display: none;
     }
@@ -120,6 +118,8 @@ a:hover, a:focus {
     .open-menu{
         width: 50px;
         height: 50px;
+        margin-top: 3rem;
+        margin-right: .5rem;
         display: block;
         border: none;
         font-size: 1.5rem;
@@ -127,7 +127,6 @@ a:hover, a:focus {
         background-color: transparent;
         background-repeat: no-repeat;
         cursor: pointer;
-
     }
 
     .close-menu{
@@ -165,8 +164,16 @@ a:hover, a:focus {
     }
 
     .menu-left{
-        width: 100%;
+        width: auto;
         display: flex;
         justify-content: flex-end;
+    }
+
+    .icon{
+        margin: 0;
+    }
+
+    #url{
+        font-size: 2.1rem;
     }
 }

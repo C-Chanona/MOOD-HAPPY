@@ -5,9 +5,10 @@ const StyledH1 = styled.h1`
     text-align: center;
     color: white;
     color: ${props => props.color} !important;
+    font-size: 3.2rem;
 
     @media screen and (min-width: 320px) and (max-width: 720px) {
-        font-size: 1.6rem;
+        font-size: 2.2rem;
     }
 `;
 

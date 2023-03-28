@@ -16,7 +16,7 @@ function Footer() {
                     <Span p="Politicas de Privacidad" />
                 </div>
             </div>
-            <div className="div-father-center">
+            <div className="image-top">
                 <div className="div-social-icons">
                     <Icon icon={data.routes.insta} />
                     <Icon icon={data.routes.twitter} />

@@ -52,7 +52,7 @@ function FormRegister() {
     return (
         <div className="div-father">
             <div className="logo-regist">
-                <Logo img={data.routes.logoH} />
+                <Logo img={data.routes.logoH} size />
             </div>
             <div className="form-regist">
                 <form className="inputs-regist" ref={formRegister}>
