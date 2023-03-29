@@ -14,19 +14,6 @@ function CardDynamic({ text, img, p, imageDes }) {
 
         setCardVisible(!cardVisible);
     }
-    // const handlerClick = (e) => {
-    //     e.preventDefault();
-    //     Swal.fire({
-    //         title: text,
-    //         text: p,
-    //         confirmButtonText: "Cerrar",
-    //         customClass: {
-    //             confirmButton: "modal-close"
-    //         },
-
-    //     })
-
-    // }
 
     return (
         <>
@@ -50,9 +37,9 @@ function CardDynamic({ text, img, p, imageDes }) {
             <div className={`modal-cards ${cardVisible ? 'modal-shows-cards' : ''}`} >
                 <div className="modal-container-cards">
                     <div>
-                        <Title text='' color="#2D26A0" />
+                        <Title text={text} color="#2D26A0" />
                     </div>
-                    <div className="content">
+                    <div className="content-cards">
                         <Span p={p.des1} />
                         <div className="image-left">
                             <Img image={imageDes.imageDes1} />

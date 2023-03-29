@@ -1,7 +1,7 @@
 import Header from "../molecules/Header";
 import Footer from "../molecules/Footer";
 import NavCites from "../molecules/NavCites";
-import Psycologist from "../molecules/Psycologist";
+import Psycologist from "../organism/Psycologist";
 
 import "../../assets/styles/cites.css";
 import "../../assets/styles/global.css";
@@ -18,12 +18,13 @@ function Cites() {
             </nav>
             <main>
                 <Psycologist />
-                
             </main>
 
             <footer>
                 <Footer />
             </footer>
+
+            <script></script>
         </body>
      );
 }

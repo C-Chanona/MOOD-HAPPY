@@ -11,10 +11,10 @@ import Books from "../components/pages/Books";
 import Cites from "../components/pages/Cites";
 
 function App() {
-    const [isUser, setIsUser] = useState({})
+    const [user, setUser] = useState({})
     return (
         <BrowserRouter>
-            <userContext.Provider value={{isUser,setIsUser}}>
+            <userContext.Provider value={{user,setUser}}>
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/Dynamics" element={<Dynamics />} />

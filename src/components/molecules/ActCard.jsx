@@ -45,7 +45,7 @@ function ActCard({ course, number, description, tasks }) {
                     <div>
                         <Title text={course} color="#2D26A0" />
                     </div>
-                    <div className="content">
+                    <div className="content-card">
                         <Span p={tasks.task1} />
                         <div className="image-right">
                             <Data text="Listo" type="checkbox" color='#00C040' name='task1' />

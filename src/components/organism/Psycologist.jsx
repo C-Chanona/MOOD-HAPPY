@@ -1,8 +1,8 @@
-import { useRef, useState, useContext } from "react";
-import UserContext from "../../context/UserContext";
+import { useRef, useState } from "react";
 import Title from "../atoms/Title";
 import Icon from "../atoms/Icon";
 import Data from "../molecules/Data";
+import Map from "../atoms/Map";
 
 import { data } from "../../data/data";
 
@@ -12,6 +12,7 @@ function Psycologist({ name, photo, address }) {
 
 
     const [formVisible, setFormVisible] = useState(false);
+    const [isOpenAddress, setIsOpenAddress] = useState(false);
     const formCite = useRef();
 
     const handlerClick = (e) => {
@@ -24,10 +25,12 @@ function Psycologist({ name, photo, address }) {
 
         setFormVisible(!formVisible);
         const cite = new FormData(formCite.current);
+        //fetch
     }
     const handlerClickAddress = (e) => {
         e.preventDefault();
 
+        setIsOpenAddress(!isOpenAddress);
     }
 
     return (
@@ -51,13 +54,23 @@ function Psycologist({ name, photo, address }) {
                 </div>
             </div>
 
+            <div className="content">
+                <div className="content-collapse">
+                    <div className={` address-expand ${isOpenAddress ? 'open-address' : ''}`}>
+                        <div>
+                            <Map />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div className={`modal ${formVisible ? 'modal-shows' : ''}`} >
                 <div className="modal-container">
                     <form ref={formCite}>
                         <Data text="Paciente" type="text" placeholder="Username" name="paciente" color="green" />
                         <Data text="Edad" type="text" placeholder="age" name="age" color="green" />
-                        <Data text="Hora" type="time" placeholder="hora" name="hour" color="green" />
                         <Data text='Fecha a asistir' type='date' color="green" />
+                        <Data text="Hora" type="time" placeholder="hora" name="hour" color="green" />
                     </form>
 
                     <button className="modal-close" onClick={handlerClickConfirm}>Confirmar Cita</button>

@@ -14,7 +14,7 @@ function FormLogin() {
   const formLogin = useRef();
   const navigate = useNavigate();
 
-  const { isUser, setIsUser } = useContext(userContext);
+  const { user, setUser } = useContext(userContext);
 
   const handlerClick = (e) => {
     e.preventDefault();
@@ -36,6 +36,7 @@ function FormLogin() {
         else {
           //token
           localStorage.setItem("Token", userToken.data.token);
+          
           fetch("https://moodhappy.iothings.com.mx:3000/Users/validate", {
             headers: {
               "auth-token": ` ${localStorage.getItem('Token')}`,
@@ -47,9 +48,8 @@ function FormLogin() {
               //context
               const accountUser = userValidate.data.user;
               console.log("hola soy lo que contine accountUser " + "\n" + accountUser);
-              setIsUser(accountUser);
-              <userContext.Provider value={accountUser} />
-              
+              setUser(accountUser);
+
               Swal.fire({
                 icon: 'success',
                 title: 'Usuario encontrado!',
