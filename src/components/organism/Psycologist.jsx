@@ -26,6 +26,17 @@ function Psycologist({ name, photo, address }) {
         setFormVisible(!formVisible);
         const cite = new FormData(formCite.current);
         //fetch
+        fetch("https://moodhappy.iothings.com.mx:3000/Cites/",{
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                patient: cite.get("patient"),
+                date_asis: cite.get('date_asis'),
+                hour: cite.get('hour')
+            })
+        })
     }
     const handlerClickAddress = (e) => {
         e.preventDefault();
@@ -67,9 +78,9 @@ function Psycologist({ name, photo, address }) {
             <div className={`modal ${formVisible ? 'modal-shows' : ''}`} >
                 <div className="modal-container">
                     <form ref={formCite}>
-                        <Data text="Paciente" type="text" placeholder="Username" name="paciente" color="green" />
+                        <Data text="Paciente" type="text" placeholder="name" name="patient" color="green" />
                         <Data text="Edad" type="text" placeholder="age" name="age" color="green" />
-                        <Data text='Fecha a asistir' type='date' color="green" />
+                        <Data text='Fecha a asistir' type='date' name='date_asis' color="green" />
                         <Data text="Hora" type="time" placeholder="hora" name="hour" color="green" />
                     </form>
 
